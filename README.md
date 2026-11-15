@@ -8,7 +8,8 @@ page: point the mouse at a word and a small tooltip appears with its rank
 
 **Repo:** <https://github.com/chealex-ya/word-rank-hover>
 
-- Chrome / Edge / Brave (Chromium, Manifest V3).
+- Chrome / Edge / Brave (Chromium, Manifest V3) on **Windows, macOS, and Linux** —
+  the extension is pure web code with nothing platform-specific.
 - 100% offline — the word list is packaged inside the extension. No network
   calls, no tracking.
 - List: [OpenSubtitles 2018](https://github.com/hermitdave/FrequencyWords)
