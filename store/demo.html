@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Word Rank Hover — demo</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #fafaf9;
+    font: 17px/1.75 Georgia, "Times New Roman", serif;
+    color: #292524;
+  }
+  article {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 64px 32px;
+  }
+  h1 {
+    font: 700 34px/1.25 "Segoe UI", system-ui, sans-serif;
+    color: #1c1917;
+    margin: 0 0 28px;
+  }
+  p { margin: 0 0 22px; }
+  em { font-style: italic; }
+
+  /* staged replicas of the extension's tooltip chips (styles from content.css) */
+  .word { position: relative; font-weight: 700; }
+  .chip {
+    position: absolute;
+    bottom: calc(100% + 7px);
+    left: 45%;
+    padding: 4px 8px;
+    border-radius: 7px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+    color: #111827;
+    font: 600 12.5px/1.3 "Segoe UI", system-ui, sans-serif;
+    white-space: nowrap;
+  }
+  .green  { background: #4ade80; }
+  .yellow { background: #facc15; }
+  .red    { background: #f87171; }
+  .cursor {
+    position: absolute;
+    top: 14px;
+    left: 58%;
+    width: 18px;
+    height: 18px;
+    filter: drop-shadow(0 1px 2px rgba(0,0,0,.4));
+  }
+</style>
+</head>
+<body>
+<article>
+  <h1>How much English do you actually need?</h1>
+
+  <p>Learners often worry about vocabulary size, but the numbers tell a comforting
+  story. The most common thousand words in English already cover the vast majority
+  of everyday conversation. Every word beyond that ceiling pays back a little less,
+  so knowing <em>which</em> words to learn next matters more than learning many of
+  them at random.</p>
+
+  <p>Consider the word <span class="word">language<span class="chip green">1,414</span><svg class="cursor" viewBox="0 0 24 24" fill="#111827"><path d="M4 2l16 8-7 2-3 7z"/></svg></span>.
+  It sits comfortably inside the top two thousand — the vocabulary people rely on
+  daily, in meetings, on the street, in every paragraph of this article. If a word
+  lives in this band, you will meet it again soon; learning it is almost never
+  wasted effort.</p>
+
+  <p>Now compare a professional label like
+  <span class="word">consultant<span class="chip yellow">8,343</span><svg class="cursor" viewBox="0 0 24 24" fill="#111827"><path d="M4 2l16 8-7 2-3 7z"/></svg></span>.
+  It is useful — if you happen to work with one, or happen to be one — but nobody
+  needs it to order coffee. Mid-band words are worth picking up when your life or
+  your job makes them familiar.</p>
+
+  <p>And then there is
+  <span class="word">ubiquitous<span class="chip red">40,608</span><svg class="cursor" viewBox="0 0 24 24" fill="#111827"><path d="M4 2l16 8-7 2-3 7z"/></svg></span>,
+  a beloved word of essayists and almost nobody else. It shows up in careful
+  writing far more often than in speech, and a learner can happily postpone it
+  for years without missing a beat.</p>
+
+  <p>The trick is not to memorize the dictionary. It is to notice, while reading,
+  which words keep showing up — and to let the rare ones wait.</p>
+</article>
+</body>
+</html>

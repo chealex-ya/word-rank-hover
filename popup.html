@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      font-family: "Segoe UI", system-ui, sans-serif;
+      width: 268px;
+      margin: 0;
+      padding: 14px;
+      color: #1f2937;
+      background: #fff;
+    }
+    h1 { font-size: 14px; margin: 0 0 12px; }
+    label { display: block; font-size: 12.5px; margin-bottom: 12px; }
+    .row { display: flex; align-items: center; gap: 8px; }
+    input[type="number"] { width: 64px; margin-left: 4px; }
+    .hint { font-size: 11.5px; color: #6b7280; margin: 2px 0 0; }
+  </style>
+</head>
+<body>
+  <h1>Word Rank Hover</h1>
+
+  <label class="row">
+    <input type="checkbox" id="enabled">
+    Enabled
+  </label>
+
+  <label>
+    Show rank:
+    <select id="mode">
+      <option value="always">on every hover</option>
+      <option value="alt">only while Alt is held</option>
+    </select>
+  </label>
+
+  <label>
+    Hide the <input type="number" id="ignoreTop" min="0" max="50000" step="100"> most common words
+    <p class="hint">e.g. 1000 stops tooltips on “the”, “and”, …</p>
+  </label>
+
+  <p class="hint">🟢 1–5k everyday · 🟡 5–10k optional · 🔴 10k+ rare<br>
+    Alt+Shift+W toggles on/off</p>
+  <p class="hint">Word data: <a href="https://github.com/hermitdave/FrequencyWords" target="_blank">FrequencyWords</a>
+    (OpenSubtitles 2018), <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC&nbsp;BY-SA&nbsp;4.0</a></p>
+
+  <script src="popup.js"></script>
+</body>
+</html>

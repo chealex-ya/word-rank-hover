@@ -1,0 +1,6 @@
+# build output
+dist/
+
+# OS noise
+Thumbs.db
+Desktop.ini
