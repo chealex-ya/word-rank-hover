@@ -4,7 +4,9 @@ A browser extension that shows the **frequency rank** of any English word on a
 page: point the mouse at a word and a small tooltip appears with its rank
 (`1` = most common). Words outside the list show `>50k`.
 
-![Word Rank Hover in action](docs/screenshots/screenshot-1.png)
+![Word Rank Hover in action](docs/screencast/demo.gif)
+
+![Store screenshot](docs/screenshots/screenshot-1.png)
 
 **Repo:** <https://github.com/chealex-ya/word-rank-hover>
 

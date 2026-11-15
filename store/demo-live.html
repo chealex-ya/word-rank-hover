@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Word Rank Hover — live demo</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #fafaf9;
+    font: 18px/1.8 Georgia, "Times New Roman", serif;
+    color: #292524;
+  }
+  article { max-width: 760px; margin: 0 auto; padding: 56px 32px; }
+  h1 {
+    font: 700 33px/1.25 "Segoe UI", system-ui, sans-serif;
+    color: #1c1917;
+    margin: 0 0 26px;
+  }
+  p { margin: 0 0 20px; }
+  .target { font-weight: 700; }
+  #vcursor {
+    position: fixed;
+    left: 0; top: 0;
+    width: 20px; height: 20px;
+    z-index: 2147483647;
+    pointer-events: none;
+    filter: drop-shadow(0 1px 2px rgba(0,0,0,.45));
+    transform: translate(-2px, -2px);
+  }
+</style>
+</head>
+<body>
+<article>
+  <h1>How much English do you actually need?</h1>
+
+  <p>Learners often worry about vocabulary size, but the numbers tell a comforting
+  story. The most common thousand words in English already cover the vast majority
+  of everyday conversation. Every word beyond that ceiling pays back a little less,
+  so knowing <em>which</em> words to learn next matters more than learning many of
+  them at random.</p>
+
+  <p>Consider the word <span class="target" id="w1">language</span>. It sits
+  comfortably inside the top two thousand — the vocabulary people rely on daily,
+  in meetings, on the street, in every paragraph of this article. If a word lives
+  in this band, you will meet it again soon; learning it is almost never wasted
+  effort.</p>
+
+  <p>Now compare a professional label like
+  <span class="target" id="w2">consultant</span>. It is useful — if you happen to
+  work with one, or happen to be one — but nobody needs it to order coffee.
+  Mid-band words are worth picking up when your life or your job makes them
+  familiar.</p>
+
+  <p>And then there is <span class="target" id="w3">ubiquitous</span>, a beloved
+  word of essayists and almost nobody else. It shows up in careful writing far
+  more often than in speech, and a learner can happily postpone it for years
+  without missing a beat.</p>
+</article>
+
+<svg id="vcursor" viewBox="0 0 24 24" fill="#111827">
+  <path d="M4 2l16 8-7 2-3 7z"/>
+</svg>
+<script>
+  // Rendered pointer: recording tools don't capture the OS cursor.
+  const cur = document.getElementById('vcursor');
+  document.addEventListener('mousemove', (e) => {
+    cur.style.transform = `translate(${e.clientX - 2}px, ${e.clientY - 2}px)`;
+  }, { passive: true });
+</script>
+</body>
+</html>
